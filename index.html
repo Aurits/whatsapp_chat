@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>WhatsApp Chat Interface</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.png');
+      background-size: contain;
+      background-repeat: repeat;
+      margin: 0;
+      padding: 0;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+      min-height: 100vh;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      max-width: 50vw;
+      width: 100%; /* Make sure container takes full width */
+    }
+
+    .chat-container {
+      flex: 1;
+      width: 100%; /* Take up full width */
+      max-height: 90vh;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      margin-bottom: 20px; /* Add margin at the bottom */
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .user-a {
+      background-color: #007BFF;
+      color: white;
+      text-align: left;
+    }
+
+    .user-b {
+      background-color: #E2E2E2;
+      text-align: right;
+    }
+
+    .timestamp {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px;
+      margin-top: 50px;
+      border-top: 1px solid #ccc;
+      position: fixed; /* Stick to the bottom */
+      bottom: 0; /* Stick to the bottom */
+      width: 100%; /* Take up full width */
+      max-width: inherit;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      background-color: inherit; /* Inherit background color */
+    }
+
+    .input-box {
+      flex-grow: 1;
+      padding: 10px;
+      border: 2px solid #007BFF;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-right: 10px;
+      outline: none;
+      width: 100%; /* Take up full width */
+      background-color: inherit; /* Inherit background color */
+    }
+
+    .send-button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="chat-container">
+      <div class="message user-a">
+        <p>Hello there! How are you doing?</p>
+        <span class="timestamp">09:00 AM</span>
+      </div>
+      <div class="message user-b">
+        <p>Hi! I'm doing well, thank you. How about you?</p>
+        <span class="timestamp">09:05 AM</span>
+      </div>
+      <div class="message user-a">
+        <p>Hello there! How are you doing?</p>
+        <span class="timestamp">09:00 AM</span>
+      </div>
+      <div class="message user-b">
+        <p>Hi! I'm doing well, thank you. How about you?</p>
+        <span class="timestamp">09:05 AM</span>
+      </div>
+      <div class="message user-a">
+        <p>Hello there! How are you doing?</p>
+        <span class="timestamp">09:00 AM</span>
+      </div>
+      <div class="message user-b">
+        <p>Hi! I'm doing well, thank you. How about you?</p>
+        <span class="timestamp">09:05 AM</span>
+      </div>
+      <!-- Add more messages here -->
+    </div>
+
+    <div class="input-container">
+      <input type="text" class="input-box" placeholder="Type a message...">
+      <button class="send-button">Submit</button>
+    </div>
+  </div>
+</body>
+</html>
